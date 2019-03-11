@@ -1,8 +1,8 @@
-export default function makeGifList(data) {
+export default function makeGifList(image) {
     const html = /*html*/ `
         <li>
-        <a href="${data.url}"><img src="${data.images.fixed_height.url}" alt="${data.images.title}"></a>
-        <p>${data.images.title}</p>
+        <a href="${image.url}"><img src="${image.images.fixed_height.url}" alt="${image.title}"></a>
+        <p>${image.title}</p>
         </li>
     `;
 
