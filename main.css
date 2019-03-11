@@ -1,0 +1,10 @@
+#header-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100px;
+}
+
+#banana {
+    width: 100px;
+    height: auto;
+}
