@@ -1,12 +1,20 @@
 #header-container {
     display: flex;
-    flex-flow: row nowrap;
-    height: 100px;
+    justify-content: center;
+    
+} 
+
+#banana-header {
+    display: inline-block;
+}
+
+#profile {
+   display: inline-block;
 }
 
 #banana {
-    width: 100px;
-    height: auto;
+    width: 75px;
+    
 }
 
 #profile-image {

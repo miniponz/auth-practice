@@ -24,10 +24,8 @@ test('function makes profile template', assert => {
     //arrange
     const user = {
         displayName: 'Carol',
-        photoUrl: './assets/banana-icon.jpg'
+        photoURL: '../assets/banana-icon.jpg'
     };
-
-    const avatar = user.photoURL || '../assets/banana-icon.jpg';
 
     const expected = /*html*/ `
         <div id="profile">
@@ -51,7 +49,7 @@ test('make profile with default avatar', assert => {
     const expected = /*html*/ `
     <div id="profile">
         <span id="user-name">Carol</span>
-        <img id="profile-image" src="../assets/banana-icon.jpg" alt="user profile image">
+        <img id="profile-image" src="../assets/default-avatar.jpg" alt="user profile image">
         <button>Sign Out</button>
     </div>
     `;
