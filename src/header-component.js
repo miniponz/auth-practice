@@ -15,10 +15,12 @@ export function makeHeader() {
 }
 
 export function makeProfile(user) {
+    const avatar = user.photoURL || '../assets/banana-icon.jpg';
+
     const html = /*html*/ `
     <div id="profile">
         <span id="user-name">${user.displayName}</span>
-        <img id="profile-image" src="${user.photoUrl}" alt="user profile image">
+        <img id="profile-image" src="${avatar}" alt="user profile image">
         <button>Sign Out</button>
     </div>
     `;
@@ -42,10 +44,15 @@ export default function loadHeader(options) {
     auth.onAuthStateChanged(user => {
         if(user) {
             const userDom = makeProfile(user);
+            const signOutButton = userDom.querySelector('button');
+            signOutButton.addEventListener('click', () => {
+                auth.signOut();
+            });
+
             header.appendChild(userDom);
         }
         else {
-            console.log('no user, go directly to auth.html, do not pass go, do not collect $200');
+            window.location = './auth.html';
         }
     });
 }
