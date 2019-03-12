@@ -13,10 +13,7 @@ window.addEventListener('hashchange', () => {
     const qOptions = readFromQuery(q);
     updateQ(qOptions.q);
 
-    
-});
-
-const url = 'https://api.giphy.com/v1/gifs/search?q=pizza+dog&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS';
+    const url = makeSearchUrl(qOptions);
 
     fetch(url)
         .then(res => res.json())
@@ -24,3 +21,6 @@ const url = 'https://api.giphy.com/v1/gifs/search?q=pizza+dog&api_key=Bsk1EF0sEa
             console.log(response);
             loadGifs(response);
         }) 
+});
+
+
