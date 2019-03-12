@@ -26,3 +26,19 @@ ul {
     list-style-type: none;
     padding: 0;
 }
+
+li {
+    text-align: center;
+    background-color: #eec900;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+#gif-list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#gif-list img {
+    margin: 5px;
+}
