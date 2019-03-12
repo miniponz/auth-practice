@@ -138,7 +138,7 @@ test('template will match HTML', assert => {
     }
 
     //act
-    const result = makeGifList(images);
+    const result = makeGifList(images.data[0]);
 
     //assert
     assert.htmlEqual(result, /*html*/ `

@@ -13,4 +13,6 @@ const url = `http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${API_KEY}`;
 
 fetch(url)
     .then(res => res.json())
-    .then(response => loadGifs(response))
+    .then(response => {
+        console.log(response)
+    })
