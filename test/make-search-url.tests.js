@@ -7,7 +7,7 @@ test('url includes q options', assert => {
     const qOptions = {
         q: 'pizza cat'
     };
-    const expected = 'http://api.giphy.com/v1/gifs/search?q=pizza+cat&api_key=4JYUtl012K7M66v68lBD84XX77aXd1g';
+    const expected = 'http://api.giphy.com/v1/gifs/search?q=pizza+cat&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS';
 //act
     const url = makeSearchUrl(qOptions);
 

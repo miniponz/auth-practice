@@ -1,7 +1,7 @@
 export default function writeSearchToQuery(existingQuery, q) {
     const searchParams = new URLSearchParams(existingQuery);
     searchParams.set('q', q);
-    searchParams.set('api_key', '4JYUtl012K7M66v68lBD84XX77aXd1g');
+    searchParams.set('api_key', 'Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS');
     return searchParams.toString();
 }
 

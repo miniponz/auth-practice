@@ -13,22 +13,22 @@ test('write search to empty query', assert => {
     //act 
     const query = writeSearchToQuery(existingQuery, q);
     //assert
-    assert.equal(query, 'q=pizza+cat&api_key=4JYUtl012K7M66v68lBD84XX77aXd1g');
+    assert.equal(query, 'q=pizza+cat&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS');
 });
 
 test('write search to existing query', assert => {
-    const existingQuery = 'q=pizza+dog&api_key=4JYUtl012K7M66v68lBD84XX77aXd1g';
+    const existingQuery = 'q=pizza+dog&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS';
     const q = 'pizza cat';
 
     const query = writeSearchToQuery(existingQuery, q);
 
-    assert.equal(query, 'q=pizza+cat&api_key=4JYUtl012K7M66v68lBD84XX77aXd1g');
+    assert.equal(query, 'q=pizza+cat&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS');
 });
 
 
 
 test('read search from query', assert => {
-    const q = 'q=pizza+cat&api_key=4JYUtl012K7M66v68lBD84XX77aXd1g';
+    const q = 'q=pizza+cat&api_key=Bsk1EF0sEaI9IRg4FCvAot870BsnEZpS';
     const expected = {
         q: 'pizza cat'
     };
