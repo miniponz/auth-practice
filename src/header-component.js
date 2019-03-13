@@ -5,7 +5,7 @@ export function makeHeader() {
     <header>
         <div id="banana-header">
             <img id="banana" src="assets/banana-icon.jpg">
-            <h1> I'm a cool header</h1>
+            <h1>Banana's Gif Search</h1>
         </div>
     </header>
     `;
