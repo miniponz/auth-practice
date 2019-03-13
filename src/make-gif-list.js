@@ -3,7 +3,7 @@ export default function makeGifList(image) {
         <li>
         <p>${image.title}</p>
         <a href="${image.url}"><img src="${image.images.fixed_height.url}" alt="${image.title}"></a>
-        <button class="favorite">Add To Favorites</button>
+        <span class="favorite">&#9829;</span>
         </li>
     `;
 
@@ -11,3 +11,4 @@ export default function makeGifList(image) {
     template.innerHTML = html;
     return template.content;
 }
+

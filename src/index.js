@@ -1,9 +1,8 @@
 import loadHeader from './header-component.js';
-import images from '../data/fake-gif-list.js';
 import loadGifs from './load-gifs.js';
 import writeSearchToQuery, { readFromQuery } from './hash-query.js';
-import '../src/search-component.js';
-import updateQ from '../src/search-component.js';
+import './search-component.js';
+import updateQ from './search-component.js';
 import makeSearchUrl from './make-url.js';
 
 loadHeader();

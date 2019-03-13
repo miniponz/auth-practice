@@ -1,4 +1,4 @@
-import writeSearchToQuery from '../src/hash-query.js';
+import writeSearchToQuery from './hash-query.js';
 
 const searchForm = document.getElementById('search-form');
 const qInput = searchForm.querySelector('input');

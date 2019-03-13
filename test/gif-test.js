@@ -145,7 +145,7 @@ test('template will match HTML', assert => {
         <li>
             <p>Funny Cat GIF</p>
             <a href="http://giphy.com/gifs/funny-cat-FiGiRei2ICzzG"><img src="http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif" alt="Funny Cat GIF"></a>
-            <button class="favorite">Add To Favorites</button>
+            <span class="favorite">♥</span>
             </li>
     `);
 });
