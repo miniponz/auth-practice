@@ -3,17 +3,17 @@ import { favoritesByUserRef, auth } from './firebase.js';
 
 const gifList = document.getElementById('gif-list');
 
-export default function loadGifs(images) {
+export default function loadGifs(images, makeTemplate) {
     clearGifs();
-    images.data.forEach(gif =>  {
-        const dom = makeGifList(gif);
-        const favoriteHeart = dom.querySelector('.favorite');
-        favoriteHeart.addEventListener('click', () => {
-            const userId = auth.currentUser.uid;
-            const userFavoritesRef = favoritesByUserRef.child(userId);
-            const userFavoriteGifRef = userFavoritesRef.child(gif.id);
+    images.data.forEach(image =>  {
+        console.log(image);
+        const dom = makeTemplate(image);
+        const favoriteHeart = dom.querySelector('.favorite-heart');
+        const userId = auth.currentUser.uid;
+        const userFavoritesRef = favoritesByUserRef.child(userId);
+        const userFavoriteGifRef = userFavoritesRef.child(image.id);
 
-            userFavoriteGifRef.once('value')
+        userFavoriteGifRef.once('value')
             .then(snapshot => {
                 const value = snapshot.val();
                 let isFavorite = false;
@@ -41,16 +41,16 @@ export default function loadGifs(images) {
                     }
                     else {
                         userFavoriteGifRef.set({
-                            title: gif.title,
-                            url: gif.url,
-                            img: gif.images.fixed_height.url,
-                            id: gif.id
+                            id: image.id,
+                            url: image.url,
+                            image: image.images.fixed_height.url,
+                            title: image.title
                         });
+                        
                         addFavorite();
                     }
                 })
             })
-        })
         gifList.appendChild(dom);
     });
 }

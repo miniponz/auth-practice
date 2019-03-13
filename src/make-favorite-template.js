@@ -1,8 +1,8 @@
-export default function makeGifList(image) {
+export default function makeFavoriteTemplate(image) {
     const html = /*html*/ `
         <li>
         <p>${image.title}</p>
-        <a href="${image.url}"><img src="${image.images.fixed_height.url}" alt="${image.title}"></a>
+        <a href="${image.url}"><img src="${image.image}" alt="${image.title}"></a>
         <span class="favorite-heart">&#9829;</span>
         </li>
     `;
@@ -11,4 +11,3 @@ export default function makeGifList(image) {
     template.innerHTML = html;
     return template.content;
 }
-

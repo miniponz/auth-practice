@@ -23,7 +23,7 @@ function loadQuery() {
         .then(res => res.json())
         .then(response => {
             console.log(response);
-            loadGifs(response);
+            loadGifs(response, makeGifList);
         });
 }
 
