@@ -5,6 +5,7 @@ import './search-component.js';
 import updateQ from './search-component.js';
 import makeSearchUrl from './make-url.js';
 import { auth } from './firebase.js';
+import makeGifList from './make-gif-list.js';
 
 loadHeader();
 

@@ -6,7 +6,6 @@ const gifList = document.getElementById('gif-list');
 export default function loadGifs(images, makeTemplate) {
     clearGifs();
     images.data.forEach(image =>  {
-        console.log(image);
         const dom = makeTemplate(image);
         const favoriteHeart = dom.querySelector('.favorite-heart');
         const userId = auth.currentUser.uid;
